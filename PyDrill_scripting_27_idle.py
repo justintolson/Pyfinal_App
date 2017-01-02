@@ -1,8 +1,8 @@
 # Python Ver:   3.5
-#
+
 # Author:       Justin Tolson
 
-#
+
 # Purpose:      To create a script that will automate the task of transferring files which have been edited within the
 #               last 24 hours from their original folder, to a destination folder.
 
