@@ -15,7 +15,9 @@ def load_gui(self):
     self.lbl_fname.grid(row=8, column=0,padx=(10,0),pady=(10,30))
     self.lbl_fname = tk.Label(self.master,text='Done')
     self.lbl_fname.grid(row=8, column=3,padx=(10,0),pady=(10,30))
-    # define various buttons that appear within the GUI and specify what happens when each button is clicked
+    
+    
+    # description and location of each button that will appear in the gui
     self.btn_browse = tk.Button(self.master, width = 12, height = 2, text = 'Browse',
                                 command=lambda: pydrill_gui_funcs.browse(self))
     self.btn_browse.grid(row=0,column=4,padx=(15,0),pady=(15,30))
@@ -28,12 +30,16 @@ def load_gui(self):
     self.btn_done = tk.Button(self.master, width = 12, height = 2, text = 'Done',
                               command=lambda: pydrill_gui_funcs.done(self))
     self.btn_done.grid(row=8, column=4, padx=(15, 0), pady=(15, 30))
+    
+    
     # define the browse box and what info it will hold
     self.custom_source = StringVar()
     self.custom_source.set('Select a source directory')
     self.text_source = tk.Entry(self.master, width=60, textvariable=self.custom_source)
     self.text_source.grid(row=1, column=2, rowspan=1, columnspan=2, padx=(5, 0),
                           pady=(10, 20))
+    
+    
     # define the destination box and what info it will hold
     self.custom_dest = StringVar()
     self.custom_dest.set('Select a destination directory')
