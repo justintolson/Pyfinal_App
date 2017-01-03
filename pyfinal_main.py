@@ -1,3 +1,13 @@
+# Python Ver:   3.5
+#
+# Author:       Justin Tolson
+#
+# Purpose:      You have been asked to implement this functionality. This means that you will need to
+#               • create a database and a table
+#               • modify your script to both record date/time of 'file check' runs and to retrieve that data for use in
+#               the 'file check' process, and
+#               • modify the UI to display the last 'file check' date/time
+
 # import various libraries as needed
 from tkinter import *
 import tkinter as tk
