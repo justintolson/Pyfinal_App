@@ -52,7 +52,7 @@ def create_db(self):
 
         # displays in the UI the last 'file check' date/time
         self.label_print = tk.Label(self.master, width=60, height=2, text="Last modified: {}".format(most_recent))
-        self.label_print.grid(row=10, column=1, rowspan=1, columnspan=3, padx=(0, 0), pady=(10, 10))
+        self.label_print.grid(row=10, column=0, rowspan=1, columnspan=3, padx=(0, 0), pady=(10, 10))
 
     update_db(self)
 
@@ -95,6 +95,7 @@ def file_mover(self, fromFilepath, toFilepath):
     # displays a tkinter message box letting the user know that files were transferred successfully
     messagebox.showinfo("File Transfer", "File successfully transferred!")
 
+    
     # update/browse through existing table
     def update_db(self):
         conn = sqlite3.connect('pyfinal.db')
@@ -108,8 +109,7 @@ def file_mover(self, fromFilepath, toFilepath):
 
         # displays in the UI the last 'file check' date/time
         self.label_print = tk.Label(self.master, width=60, height=2, text="Last modified: {}".format(most_recent))
-        self.label_print.grid(row=10, column=1, rowspan=1, columnspan=3, padx=(0, 0), pady=(10, 10))
-
+        self.label_print.grid(row=10, column=0, rowspan=1, columnspan=3, padx=(0, 0), pady=(10, 10))
 
     update_db(self)
 
@@ -120,6 +120,8 @@ def finished(self):
                               "Are you sure you want to close the application?"):
         self.master.destroy()
         os._exit(0)
+
+
 
 
 
